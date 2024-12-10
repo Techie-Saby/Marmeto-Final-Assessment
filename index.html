@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shopping Cart Drawer with product list, recommendations, and checkout options">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/hvdtrial-brandon-grotesque" rel="stylesheet">
+</head>
+<body>
+    
+    <button class="cart-trigger" aria-label="Open shopping cart">Your Bag (0)</button>
+
+    
+    <div class="cart-drawer" aria-labelledby="cart-title" role="dialog" aria-hidden="true">
+        <header class="cart-header">
+            <h2 id="cart-title">Your Bag</h2>
+            <button class="close-cart" aria-label="Close shopping cart">&times;</button>
+        </header>
+
+        
+        <div class="progress-steps" role="progressbar" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+            <span class="step active">1</span>
+            <span class="step-line"></span>
+            <span class="step">2</span>
+            <span class="step-line"></span>
+            <span class="step">3</span>
+        </div>
+        <div class="shipping-details-container">
+            <span class="shipping-details">Free Shipping Above Rs 500</span>
+            <span class="shipping-details">10% Discount Above Rs 2000</span>
+            <span class="shipping-details">20% Discount Above Rs 4000</span>
+        </div>
+
+        
+        <div class="cart-content">
+            
+            <section class="cart-items" aria-label="Cart items"></section>
+
+            
+            <div class="coupon-section">
+                <input type="text" class="coupon-input" placeholder="Apply your Coupons" aria-label="Coupon Code">
+                <button class="apply-coupon-btn">Apply</button>
+            </div>
+
+            
+            <div class="recommendations">
+                <h3 class="recommend">You Might Also Like</h3>
+                <div class="recommendation-items"></div>
+            </div>
+
+            <div class="gift-card-container">
+                <div class="gift-card-semi-container">
+                    <h3 class="gift-card-title">Gifting this Order</h3>
+                    <label for="gift-card" class="gift-card-label">
+                        <input type="checkbox" name="gift-card" id="">
+                        <p>Add a gift note</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        
+        <footer class="cart-footer">
+            <div class="summary-row">
+                <span class="discount-title">Discount on MRP</span>
+                <span class="discount-amount">Rs 0.00</span>
+            </div>
+            <div class="summary-row">
+                <span class="total-title">Total</span>
+                <span class="final-total">Rs 0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
